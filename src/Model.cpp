@@ -110,6 +110,10 @@ void SchellingModel::doPerTick(){
 
 	} 
 
+	if (avgSatisfied==1) {
+		repast::RepastProcess::instance()->getScheduleRunner().stop();
+	}
+
 
 	//agents move to a random location if unsatisfied
 	it = agents.begin();
